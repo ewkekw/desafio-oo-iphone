@@ -12,7 +12,7 @@ public class Iphone{
     private INavegadorInternet navegador;
     private IReprodutorMusical musicas;
 
-    public void iPhone() {
+    public Iphone() {
         this.musicas = new ReprodutorMusical();
         this.telefone = new AparelhoTelefone();
         this.navegador = new NavegadorInternet();
@@ -29,7 +29,7 @@ public class Iphone{
 
     //Músicas
     public void tocarMusica(){
-        tocarMusica();
+        musicas.tocarMusica();
     }
 
     public void pausarMusica(){
@@ -38,6 +38,7 @@ public class Iphone{
 
     public void adicionarMusica(String musica){
         musicas.adicionarMusica(musica);
+        System.out.println("\n" + "-------------------" + "\n");
     }
 
     //Navegador

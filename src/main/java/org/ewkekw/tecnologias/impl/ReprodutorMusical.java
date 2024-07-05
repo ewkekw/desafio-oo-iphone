@@ -2,10 +2,15 @@ package org.ewkekw.tecnologias.impl;
 
 import org.ewkekw.tecnologias.IReprodutorMusical;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReprodutorMusical implements IReprodutorMusical {
     private List<String> musicas;
+
+    public ReprodutorMusical() {
+        this.musicas = new ArrayList<>();
+    }
 
     @Override
     public void tocarMusica() {
@@ -22,8 +27,8 @@ public class ReprodutorMusical implements IReprodutorMusical {
         musicas.add(musica);
         System.out.println("Música: " + musica + " adicionada!");
         System.out.println("Sua lista de músicas atuais: ");
-        for (String musicas : musicas) {
-            System.out.println(musicas);
+        for (String musicaAtual : musicas) {
+            System.out.println(musicaAtual);
         }
     }
 }

@@ -2,10 +2,15 @@ package org.ewkekw.tecnologias.impl;
 
 import org.ewkekw.tecnologias.INavegadorInternet;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NavegadorInternet implements INavegadorInternet {
     private List<String> historico;
+
+    public NavegadorInternet() {
+        this.historico = new ArrayList<>();
+    }
 
     @Override
     public void navegar(String url) {
